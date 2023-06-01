@@ -27,7 +27,7 @@
     <script src="../../js/participant/participant-general.js"></script>
 
 </head>
-<body class="overflow-hidden" onload="loadParticipantList(); boatTypeDropdown('participant-type')">
+<body class="overflow-hidden" onload="loadParticipantList(); boatTypeDropdown('boat-type')">
 
 <header>
   <div class="sea-header brand">
@@ -82,17 +82,17 @@
         <div id="edit-participant">
           <div class="modal-body">
             <div class="form-group">
-              <label for="participant-name">
+              <label for="boat-name">
                 <div id="participantname">Name of the boat</div>
               </label>
-              <input type="text" name="name" class="form-control" id="participant-name"
-                     aria-describedby="emailHelp" placeholder="Enter Boatname">
+              <input type="text" name="name" class="form-control" id="boat-name"
+                     aria-describedby="emailHelp" placeholder="Enter Updated Boatname">
             </div>
             <div class="form-group">
-              <label for="participant-type">
+              <label for="boat-type">
                 <div id="participanttype">Type of the boat</div>
               </label>
-              <select type="" name="boatType" class="form-control" id="participant-type"
+              <select type="" name="boatType" class="form-control" id="boat-type"
                       aria-describedby="emailHelp" required>
               </select>
             </div>
@@ -100,10 +100,10 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            <button id="delete-button" type="button" class="btn btn-outline-danger confirmation-button"
+            <button id="delete-participant-button" type="button" class="btn btn-outline-danger confirmation-button"
                     onclick="deleteBoat()">Delete boat</button>
             <button id="update-participant-button" type="button" class="btn btn-outline-success confirmation-button"
-                    onclick="editBoat()">Save changes
+                    onclick="editParticipant()">Save changes
             </button>
           </div>
         </div>

@@ -32,7 +32,7 @@ function createSailboatDropdown(elementId) {
 }
 
 function createParticipant() {
-    const boatDropdown = document.getElementById("race-participant");
+    const boatDropdown = document.getElementById("boat-type");
     const selectedOption = boatDropdown.options[boatDropdown.selectedIndex];
 
     const newParticipantBody = {
@@ -61,16 +61,16 @@ function loadParticipantList() {
         console.log(participantList);
 
         for (let i = 0; i < participantList.length; i++) {
-           pName = participantList[i].boatName;
-              console.log(pName);
-                pShortDescription = participantList[i].boatType;
-                if (pShortDescription === "FOOT_25") {
-                    pShortDescription = "25 Foot";
-                } else if (pShortDescription === "FOOT_40") {
-                    pShortDescription = "40 Foot";
-                } else if (pShortDescription === "FOOT_25_40") {
-                    pShortDescription = "25-40 Foot";
-                }
+            pName = participantList[i].boatName;
+            console.log(pName);
+            pShortDescription = participantList[i].boatType;
+            if (pShortDescription === "FOOT_25") {
+                pShortDescription = "25 Foot";
+            } else if (pShortDescription === "FOOT_40") {
+                pShortDescription = "40 Foot";
+            } else if (pShortDescription === "FOOT_25_40") {
+                pShortDescription = "25-40 Foot";
+            }
 
             createParticipantRow(participantList[i], pName, pShortDescription);
             console.log(participantList[i]);
@@ -102,7 +102,7 @@ function createParticipantRow(element, pName, pShortDescription) {
     a.setAttribute("data-target", "#edit-a-participant");
     a.onclick = function () {
         renderEditParticipantForm(element)
-        //renderDeleteParticipantForm(element.id)
+        renderDeleteParticipantForm(element.id)
     }
 
     div.appendChild(div2);
@@ -111,20 +111,15 @@ function createParticipantRow(element, pName, pShortDescription) {
     a.appendChild(div);
     table.appendChild(a);
 }
+
 //make later, because it only needs to be able to change the race date
 function renderEditParticipantForm(id) {
-    const name = document.getElementById("participant-name");
-    const type = document.getElementById("participant-type");
+    console.log(id.id)
+    const name = document.getElementById("boat-name");
+    const type = convertToEnumValue(document.getElementById("boat-type"));
 
-    name.value = id.name;
-    type.value = convertToEnumValue(id.type);
-
-    // Catch the boatName property if available
-    if (id.boat && id.boat.boatName) {
-        const boatName = id.boat.boatName;
-        // Use the boatName as needed (e.g., display, assign to an element)
-        console.log(boatName);
-    }
+    name.value = id.boatName;
+    type.value = id.boatType;
 
     const button = document.getElementById("update-participant-button");
     button.onclick = function () {
@@ -133,18 +128,40 @@ function renderEditParticipantForm(id) {
 }
 
 function editParticipant(participantId) {
-    const name = document.getElementById("participant-name").value;
-    const typeElement = document.getElementById("participant-type");
-    const type = convertToEnumValue(typeElement.value);
-
-    const participantBody = {
+    const name = document.getElementById("boat-name").value;
+    const typeElement = document.getElementById("boat-type").value;
+    const type = convertToEnumValue(typeElement);
+    const newParticipantBody = {
         id: participantId,
-        name: name,
-        type: type,
+        boatName: name,
+        boatType: type
     };
+    console.log(newParticipantBody)
+    api("api/post/update/" + participantId + "/participant", "put", newParticipantBody)
+        .then(() => {
+            confirmationButtonChange();
+        })
+        .catch(error => {
+            console.error(error);
+        });
+}
 
-    console.log(participantBody);
-    api("api/post/update/" + participantId + "/participant", "post", participantBody);
+function renderDeleteParticipantForm(id) {
+    console.log(id)
+    const button = document.getElementById("delete-participant-button");
+    button.onclick = function () {
+        deleteParticipant(id);
+    }
+}
 
+function deleteParticipant(participantId) {
+    console.log(participantId)
+    api("api/post/delete/" + participantId + "/participant", "delete")
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.error(error);
+        });
     confirmationButtonChange();
 }
