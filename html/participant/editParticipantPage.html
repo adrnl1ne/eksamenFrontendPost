@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roskile Sejlklub</title>
+
+  <!-- JS -->
+  <script async src="https://via.batch.com/3.5.0/native.min.js"></script>
+  <script async src="https://via.batch.com/3.5.0/sdk.min.js"></script>
+  <script async src="https://via.batch.com/v3/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
+
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../../css/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="../../css/packages/package-table.css"/>
+  <link rel="stylesheet" href="../../css/mainpage/sidebar.css">
+  <link rel="stylesheet" href="../../css/mainpage/header.css">
+
+  <!-- local scripts -->
+  <script src="../../js/utility/api.js"></script>
+  <script src="../../js/menu.js"></script>
+  <script src="../../js/sailboat/sailboat-general.js"></script>
+    <script src="../../js/participant/participant-general.js"></script>
+
+</head>
+<body class="overflow-hidden" onload="loadParticipantList(); boatTypeDropdown('participant-type')">
+
+<header>
+  <div class="sea-header brand">
+    <div class="logo-container">
+      <a href="../index.html">
+        <img class="logo"
+             src="https://usercontent.one/wp/www.rosejl.dk/wp-content/uploads/2021/04/logo-navnetraek-negativ-horisontal-ny-gps-2.png?media=1667580263"
+             alt="Roskilde Sejlklub - logo">
+      </a>
+    </div>
+  </div>
+  <button class="sidebar-button sidebar-toggle" onclick="toggleSidebar()">&#9776;</button>
+</header>
+
+<div class="row vh-100">
+
+  <div id="table" class="periodic-table mt-4">
+    <div class="empty-spacer-1"></div>
+    <div class="empty-spacer-2"></div>
+  </div>
+
+  <div class="sidebar">
+    <nav class="sidebar-menu">
+      <h3>Menu</h3>
+      <ul>
+        <li><a style="color: white; text-decoration: none;" data-description="Create new sailboats"
+               type="button"
+               href="../index.html">Frontpage</a></li>
+
+        <li><a style="color: white; text-decoration: none;" data-description="Edit sailboats" type="button"
+               href="../sailboat/editSailboatPage.html">Edit Sailboat</a></li>
+
+        <li><a style="color: white; text-decoration: none;" data-description="Delete sailboats" type="button"
+               href="../sailboat/editSailboatPage.html">Delete Sailboat</a></li>
+        <li><a style="color: white; text-decoration: none;" data-description="Edit participant" type="button"
+               href="../participant/editParticipantPage.html">Edit Participant</a></li>
+        <li><a style="color: white; text-decoration: none;" data-description="Delete participant" type="button"
+               href="../participant/editParticipantPage.html">Delete Participant</a></li>
+      </ul>
+    </nav>
+  </div>
+
+
+  <!-- Modal -->
+  <div class="modal" id="edit-a-participant" tabindex="-1" role="dialog" aria-labelledby="edit-participant-label"
+       aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="edit-sailboat-label">Edit A Sailboat</h5>
+        </div>
+        <div id="edit-participant">
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="participant-name">
+                <div id="participantname">Name of the boat</div>
+              </label>
+              <input type="text" name="name" class="form-control" id="participant-name"
+                     aria-describedby="emailHelp" placeholder="Enter Boatname">
+            </div>
+            <div class="form-group">
+              <label for="participant-type">
+                <div id="participanttype">Type of the boat</div>
+              </label>
+              <select type="" name="boatType" class="form-control" id="participant-type"
+                      aria-describedby="emailHelp" required>
+              </select>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button id="delete-button" type="button" class="btn btn-outline-danger confirmation-button"
+                    onclick="deleteBoat()">Delete boat</button>
+            <button id="update-participant-button" type="button" class="btn btn-outline-success confirmation-button"
+                    onclick="editBoat()">Save changes
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
