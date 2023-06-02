@@ -8,7 +8,7 @@ function createSailboatDropdown(elementId) {
         console.log(sailboatList);
 
         // Fetch existing participants
-        api("api/get/findAll/allParticipants", "get").then(participantsResponse => {
+        api("api/get/findall/participant", "get").then(participantsResponse => {
             const participants = participantsResponse;
 
             // Clear existing options
@@ -56,7 +56,7 @@ function createParticipant() {
 }
 
 function loadParticipantList() {
-    api("api/get/findAll/allParticipants", "get").then(response => {
+    api("api/get/findall/participant", "get").then(response => {
         participantList = response;
         console.log(participantList);
 

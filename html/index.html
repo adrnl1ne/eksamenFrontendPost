@@ -25,6 +25,7 @@
     <script src="../js/menu.js"></script>
     <script src="../js/sailboat/sailboat-general.js"></script>
     <script src="../js/participant/participant-general.js"></script>
+    <script src="../js/race/race-general.js"></script>
 
 
 </head>
@@ -72,6 +73,22 @@
     <!-- Your page content here -->
     <div class="p-3 col-10">
 
+
+        <h2>Race Results</h2>
+        <table id="race-results" class="table">
+            <thead>
+            <tr>
+                <th>Participant</th>
+                <th>Boat Type</th>
+                <th>Placement</th>
+                <th>Points</th>
+                <th>Status</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!-- Participant rows will be dynamically added here -->
+            </tbody>
+        </table>
 
         <!-- Create new boat modal -->
         <div class="modal" id="create-new-boat" tabindex="-1" role="dialog" aria-labelledby="create-sailboat-label"
