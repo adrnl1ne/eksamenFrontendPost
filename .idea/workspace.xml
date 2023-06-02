@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="first commit (way to far in though)">
+    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="second commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/participant/editParticipantPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/participant/editParticipantPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/participant/participant-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/participant/participant-general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +64,7 @@
       <updated>1685551213830</updated>
       <workItem from="1685551215033" duration="1101000" />
       <workItem from="1685560985611" duration="31000" />
-      <workItem from="1685607012666" duration="37422000" />
+      <workItem from="1685607012666" duration="38191000" />
     </task>
     <task id="LOCAL-00001" summary="first commit (way to far in though)">
       <created>1685656021251</created>
@@ -76,7 +73,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685656021251</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="second commit">
+      <created>1685662798485</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685662798485</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,7 +99,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit (way to far in though)" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit (way to far in though)" />
+    <MESSAGE value="second commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="second commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
