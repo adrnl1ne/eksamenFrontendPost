@@ -1,26 +1,21 @@
 function displayRaceResults() {
-    api("api/get/findall/participant", "get")
-        .then(participantsResponse => participantsResponse.json())
-        .then(data => {
-            console.log(data);
-            const raceResults = data.results;
-            console.log(raceResults);
-
+    api("api/get/findall/participant", "get").then(response =>{
+        content = response;
             const tableBody = document.querySelector('#race-results tbody');
 
             tableBody.innerHTML = '';
 
-            raceResults.forEach(result => {
+            for (let i = 0; i < content.length; i++) {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-          <td>${result.participant}</td>
-          <td>${result.boatType}</td>
-          <td>${result.placement}</td>
-          <td>${result.points}</td>
-          <td>${result.status}</td>
+          <td>${content.participant}</td>
+          <td>${content.boatType}</td>
+          <td>${content.placement}</td>
+          <td>${content.points}</td>
+          <td>${content.status}</td>
         `;
                 tableBody.appendChild(row);
-            });
+            }
         })
         .catch(error => {
             console.error('Error fetching race results:', error);
