@@ -3,8 +3,6 @@ let sailboatList = [];
 const boatTypes = ["40 Foot", "25 Foot", "25-40 Foot"]
 
 
-
-
 function boatTypeDropdown(elementId) {
     const select = document.getElementById(elementId);
 
@@ -39,8 +37,24 @@ function createSailboat() {
         type: convertToEnumValue(document.getElementById("boat-type").value)
     };
     console.log(newSailboatBody);
-    api("api/post/create/sailboat", "post", newSailboatBody);
-    confirmationButtonChange();
+    document.querySelector("#new-boat-spinner").style.display = "block";
+    document.querySelector("#new-boat-button").style.display = "none";
+    api("api/post/create/sailboat", "post", newSailboatBody)
+        .then(response => {
+        // Handle the response
+        console.log(response);
+    })
+        .catch(error => {
+            // Handle the error
+            console.error(error);
+        })
+        .finally(() => {
+            setTimeout(() => {
+                document.querySelector("#new-boat-spinner").style.display = "none";
+                document.querySelector("#new-boat-button").style.display = "block";
+                window.location.reload();
+            }, 2000)
+        });
 }
 
 function convertToEnumValue(value) {
@@ -148,7 +162,6 @@ function editBoat(boatId) {
             console.error("Error:", error);
         });
 }
-
 
 
 function renderDeleteSailboatForm(id) {

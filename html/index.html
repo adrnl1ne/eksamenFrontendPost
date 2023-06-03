@@ -117,7 +117,10 @@
 
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="create" class="btn btn-outline-success confirmation-button"
+                            <div id="new-boat-spinner" style="display: none" class="spinner-border">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <input id="new-boat-button" type="submit" value="create" class="btn btn-outline-success confirmation-button"
                                    onclick="createSailboat()">
                         </div>
                     </div>

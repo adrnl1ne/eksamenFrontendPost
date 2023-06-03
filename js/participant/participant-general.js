@@ -32,7 +32,7 @@ function createSailboatDropdown(elementId) {
 }
 
 function createParticipant() {
-    const boatDropdown = document.getElementById("boat-type");
+    const boatDropdown = document.getElementById("race-participant");
     const selectedOption = boatDropdown.options[boatDropdown.selectedIndex];
     console.log(selectedOption);
 
@@ -58,6 +58,7 @@ function createParticipant() {
             setTimeout(() => {
                 document.querySelector("#new-participant-spinner").style.display = "none";
                 document.querySelector("#new-participant-button").style.display = "block";
+                window.location.reload();
             }, 2000)
         });
 }

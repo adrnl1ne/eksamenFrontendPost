@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="test">
+    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="test igen">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/participant/editParticipantPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/participant/editParticipantPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/participant/participant-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/participant/participant-general.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/race/race-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/race/race-general.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/sailboat/sailboat-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sailboat/sailboat-general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +73,7 @@
       <workItem from="1685560985611" duration="31000" />
       <workItem from="1685607012666" duration="44574000" />
       <workItem from="1685689589424" duration="607000" />
-      <workItem from="1685818213623" duration="7082000" />
+      <workItem from="1685818213623" duration="8501000" />
     </task>
     <task id="LOCAL-00001" summary="first commit (way to far in though)">
       <created>1685656021251</created>
@@ -111,7 +110,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685818246488</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="test igen">
+      <created>1685829080829</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685829080829</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -134,14 +140,15 @@
     <MESSAGE value="??? xml" />
     <MESSAGE value="fifth" />
     <MESSAGE value="test" />
-    <option name="LAST_COMMIT_MESSAGE" value="test" />
+    <MESSAGE value="test igen" />
+    <option name="LAST_COMMIT_MESSAGE" value="test igen" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/js/sailboat/sailboat-general.js</url>
-          <line>76</line>
+          <line>90</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
