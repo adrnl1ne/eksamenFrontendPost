@@ -4,8 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="fifth">
+    <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/participant/participant-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/participant/participant-general.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/race/race-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/race/race-general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +74,7 @@
       <workItem from="1685560985611" duration="31000" />
       <workItem from="1685607012666" duration="44574000" />
       <workItem from="1685689589424" duration="607000" />
+      <workItem from="1685818213623" duration="7082000" />
     </task>
     <task id="LOCAL-00001" summary="first commit (way to far in though)">
       <created>1685656021251</created>
@@ -99,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685689194274</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="test">
+      <created>1685818246488</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1685818246488</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +133,8 @@
     <MESSAGE value="second commit" />
     <MESSAGE value="??? xml" />
     <MESSAGE value="fifth" />
-    <option name="LAST_COMMIT_MESSAGE" value="fifth" />
+    <MESSAGE value="test" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -130,10 +143,6 @@
           <url>file://$PROJECT_DIR$/js/sailboat/sailboat-general.js</url>
           <line>76</line>
           <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/participant/participant-general.js</url>
-          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

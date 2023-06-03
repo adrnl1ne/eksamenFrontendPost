@@ -8,7 +8,7 @@ function createSailboatDropdown(elementId) {
         console.log(sailboatList);
 
         // Fetch existing participants
-        api("api/get/findall/participant", "get").then(participantsResponse => {
+        api("api/get/findAll/participant", "get").then(participantsResponse => {
             const participants = participantsResponse;
 
             // Clear existing options
@@ -34,15 +34,17 @@ function createSailboatDropdown(elementId) {
 function createParticipant() {
     const boatDropdown = document.getElementById("boat-type");
     const selectedOption = boatDropdown.options[boatDropdown.selectedIndex];
+    console.log(selectedOption);
 
     const newParticipantBody = {
-        boatName: selectedOption.text, // Get the boat name from the selected option
+        boatName: selectedOption.text,
         boatType: convertToEnumValue(document.getElementById("boat-type").value),
         boatId: selectedOption.value
     };
 
     console.log(newParticipantBody);
-
+    document.querySelector("#new-participant-spinner").style.display = "block";
+    document.querySelector("#new-participant-button").style.display = "none";
     api("api/post/create/participant", "post", newParticipantBody)
         .then(response => {
             // Handle the response
@@ -51,12 +53,17 @@ function createParticipant() {
         .catch(error => {
             // Handle the error
             console.error(error);
+        })
+        .finally(() => {
+            setTimeout(() => {
+                document.querySelector("#new-participant-spinner").style.display = "none";
+                document.querySelector("#new-participant-button").style.display = "block";
+            }, 2000)
         });
-    confirmationButtonChange();
 }
 
 function loadParticipantList() {
-    api("api/get/findall/participant", "get").then(response => {
+    api("api/get/findAll/participant", "get").then(response => {
         participantList = response;
         console.log(participantList);
 

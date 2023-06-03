@@ -79,10 +79,9 @@
             <thead>
             <tr>
                 <th>Participant</th>
+                <th>Boat Name</th>
                 <th>Boat Type</th>
-                <th>Placement</th>
                 <th>Points</th>
-                <th>Status</th>
             </tr>
             </thead>
             <tbody>
@@ -147,7 +146,11 @@
 
                         </div>
                         <div class="modal-footer">
-                            <input type="submit" value="create" class="btn btn-outline-success confirmation-button"
+                            <div id="new-participant-spinner" style="display: none" class="spinner-border">
+                                <span class="sr-only">Loading...</span>
+                            </div>
+                            <input id="new-participant-button" type="submit" value="create"
+                                   class="btn btn-outline-success confirmation-button"
                                    onclick="createParticipant()">
                         </div>
                         </div>

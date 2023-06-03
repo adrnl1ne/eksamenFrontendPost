@@ -1,26 +1,25 @@
 function displayRaceResults() {
-    api("api/get/findall/participant", "get").then(response =>{
-        content = response;
-            const tableBody = document.querySelector('#race-results tbody');
+    api("api/get/findAll/participant", "get").then(response => {
+        console.log(response);
+        const tableBody = document.querySelector('#race-results tbody');
+        const sortedParticipants = response.sort((a, b) => a.points - b.points);
+        tableBody.innerHTML = '';
 
-            tableBody.innerHTML = '';
-
-            for (let i = 0; i < content.length; i++) {
-                const row = document.createElement('tr');
-                row.innerHTML = `
-          <td>${content.participant}</td>
-          <td>${content.boatType}</td>
-          <td>${content.placement}</td>
-          <td>${content.points}</td>
-          <td>${content.status}</td>
+        for (let i = 0; i < sortedParticipants.length; i++) {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+          <td>${sortedParticipants[i].id}</td>
+          <td>${sortedParticipants[i].boatName}</td>
+          <td>${sortedParticipants[i].boatType}</td>
+          <td>${sortedParticipants[i].points}</td>
+          
         `;
-                tableBody.appendChild(row);
-            }
-        })
+            tableBody.appendChild(row);
+        }
+    })
         .catch(error => {
             console.error('Error fetching race results:', error);
         });
 }
 
-// Call the function to display the race results when the page loads
 window.addEventListener('load', displayRaceResults);
