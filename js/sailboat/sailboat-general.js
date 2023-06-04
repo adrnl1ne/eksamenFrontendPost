@@ -41,9 +41,9 @@ function createSailboat() {
     document.querySelector("#new-boat-button").style.display = "none";
     api("api/post/create/sailboat", "post", newSailboatBody)
         .then(response => {
-        // Handle the response
-        console.log(response);
-    })
+            // Handle the response
+            console.log(response);
+        })
         .catch(error => {
             // Handle the error
             console.error(error);
@@ -136,7 +136,7 @@ function renderEditSailboatForm(id) {
     type.value = id.type;
 
 
-    const button = document.getElementById("update-button");
+    const button = document.getElementById("update-boat-button");
     button.onclick = function () {
         editBoat(id.id);
     }
@@ -153,20 +153,31 @@ function editBoat(boatId) {
         name: name,
         type: type,
     };
-
+    console.log(newParticipantBody)
+    document.querySelector("#update-boat-spinner").style.display = "block";
+    document.querySelector("#update-boat-button").style.display = "none";
+    document.querySelector("#delete-boat-button").style.display = "none";
     api("api/post/update/" + boatId + "/sailboat", "post", boatBody)
-        .then(() => {
-            confirmationButtonChange();
+        .then(response => {
+            console.log(response);
         })
         .catch(error => {
             console.error("Error:", error);
+        })
+        .finally(() => {
+            setTimeout(() => {
+                document.querySelector("#update-boat-spinner").style.display = "none";
+                document.querySelector("#update-boat-button").style.display = "block";
+                document.querySelector("#delete-boat-button").style.display = "block";
+                window.location.reload();
+            }, 2000)
         });
 }
 
 
 function renderDeleteSailboatForm(id) {
     console.log(id);
-    const button = document.getElementById("delete-button");
+    const button = document.getElementById("delete-boat-button");
     button.onclick = function () {
         deleteBoat(id);
     }
@@ -174,7 +185,23 @@ function renderDeleteSailboatForm(id) {
 
 function deleteBoat(boatId) {
     console.log(boatId);
-    api("api/post/delete/" + boatId + "/sailboat", "post");
-    confirmationButtonChange();
+    document.querySelector("#update-boat-spinner").style.display = "block";
+    document.querySelector("#update-boat-button").style.display = "none";
+    document.querySelector("#delete-boat-button").style.display = "none";
+    api("api/post/delete/" + boatId + "/sailboat", "post")
+        .then(response => {
+            console.log(response);
+        })
+        .catch(error => {
+            console.error("Error:", error);
+        })
+        .finally(() => {
+            setTimeout(() => {
+                document.querySelector("#update-boat-spinner").style.display = "none";
+                document.querySelector("#update-boat-button").style.display = "block";
+                document.querySelector("#delete-boat-button").style.display = "block";
+                window.location.reload();
+            }, 2000)
+        });
 
 }

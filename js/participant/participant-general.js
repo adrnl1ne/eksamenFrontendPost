@@ -145,12 +145,23 @@ function editParticipant(participantId) {
         boatType: type
     };
     console.log(newParticipantBody)
+    document.querySelector("#update-participant-spinner").style.display = "block";
+    document.querySelector("#update-participant-button").style.display = "none";
+    document.querySelector("#delete-participant-button").style.display = "none";
     api("api/post/update/" + participantId + "/participant", "put", newParticipantBody)
-        .then(() => {
-            confirmationButtonChange();
+        .then(response => {
+            console.log(response);
         })
         .catch(error => {
             console.error(error);
+        })
+        .finally(() => {
+            setTimeout(() => {
+                document.querySelector("#update-participant-spinner").style.display = "none";
+                document.querySelector("#update-participant-button").style.display = "block";
+                document.querySelector("#delete-participant-button").style.display = "block";
+                window.location.reload();
+            }, 2000)
         });
 }
 
@@ -164,12 +175,22 @@ function renderDeleteParticipantForm(id) {
 
 function deleteParticipant(participantId) {
     console.log(participantId)
+    document.querySelector("#update-participant-spinner").style.display = "block";
+    document.querySelector("#update-participant-button").style.display = "none";
+    document.querySelector("#delete-participant-button").style.display = "none";
     api("api/post/delete/" + participantId + "/participant", "delete")
         .then(response => {
             console.log(response);
         })
         .catch(error => {
             console.error(error);
-        });
-    confirmationButtonChange();
+        })
+        .finally(() => {
+        setTimeout(() => {
+            document.querySelector("#update-participant-spinner").style.display = "none";
+            document.querySelector("#update-participant-button").style.display = "block";
+            document.querySelector("#delete-participant-button").style.display = "block";
+            window.location.reload();
+        }, 2000)
+    });
 }

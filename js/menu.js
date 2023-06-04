@@ -22,16 +22,3 @@ function disableAllActiveClass() {
 function resetPages() {
     document.querySelector('.content-page').style.display = "none";
 }
-
-
-
-
-function confirmationButtonChange() {
-   // document.querySelector('.confirmation-button').style.display = "none";
-    $('.confirmation-button').hide();
-    $('.confirmation-button').show(2000, function() {
-        setTimeout(function() {
-            location.reload(); // Refresh the page
-        }, 100);
-    });
-}

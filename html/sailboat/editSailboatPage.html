@@ -95,10 +95,13 @@
 
                     </div>
                     <div class="modal-footer">
+                        <div id="update-boat-spinner" style="display: none" class="spinner-border">
+                            <span class="sr-only">Loading...</span>
+                        </div>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button id="delete-button" type="button" class="btn btn-outline-danger confirmation-button"
-                        onclick="deleteBoat()">Delete boat</button>
-                        <button id="update-button" type="button" class="btn btn-outline-success confirmation-button"
+                        <button id="delete-boat-button" type="button" class="btn btn-outline-danger confirmation-button"
+                                onclick="deleteBoat()">Delete boat</button>
+                        <button id="update-boat-button" type="button" class="btn btn-outline-success confirmation-button"
                                 onclick="editBoat()">Save changes
                         </button>
                     </div>
