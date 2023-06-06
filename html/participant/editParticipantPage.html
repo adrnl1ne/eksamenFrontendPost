@@ -5,8 +5,7 @@
     <title>Roskile Sejlklub</title>
 
   <!-- JS -->
-  <script async src="https://via.batch.com/3.5.0/native.min.js"></script>
-  <script async src="https://via.batch.com/3.5.0/sdk.min.js"></script>
+
   <script async src="https://via.batch.com/v3/bootstrap.min.js"></script>
   <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"></script>
@@ -59,12 +58,9 @@
         <li><a style="color: white; text-decoration: none;" data-description="Edit sailboats" type="button"
                href="../sailboat/editSailboatPage.html">Edit Sailboat</a></li>
 
-        <li><a style="color: white; text-decoration: none;" data-description="Delete sailboats" type="button"
-               href="../sailboat/editSailboatPage.html">Delete Sailboat</a></li>
         <li><a style="color: white; text-decoration: none;" data-description="Edit participant" type="button"
                href="../participant/editParticipantPage.html">Edit Participant</a></li>
-        <li><a style="color: white; text-decoration: none;" data-description="Delete participant" type="button"
-               href="../participant/editParticipantPage.html">Delete Participant</a></li>
+
       </ul>
     </nav>
   </div>
@@ -103,7 +99,7 @@
             </div>
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button id="delete-participant-button" type="button" class="btn btn-outline-danger confirmation-button"
-                    onclick="deleteBoat()">Delete boat</button>
+                    onclick="deleteBoat()">Delete participant</button>
             <button id="update-participant-button" type="button" class="btn btn-outline-success confirmation-button"
                     onclick="editParticipant()">Save changes
             </button>

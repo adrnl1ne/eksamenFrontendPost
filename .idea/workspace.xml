@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d446c1aa-7093-4b37-9599-54c530476421" name="Changes" comment="oprydning part 1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/participant/editParticipantPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/participant/editParticipantPage.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sailboat/editSailboatPage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/menu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/participant/participant-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/participant/participant-general.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sailboat/sailboat-general.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sailboat/sailboat-general.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,7 +50,8 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Nikol/IdeaProjects/eksamenFrontend/js/rider&quot;
+    &quot;two.files.diff.last.used.folder&quot;: &quot;C:/Users/Nikol/IdeaProjects/eksamenFrontend/js/rider&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -76,6 +76,8 @@
       <workItem from="1685689589424" duration="607000" />
       <workItem from="1685818213623" duration="8712000" />
       <workItem from="1685884779391" duration="742000" />
+      <workItem from="1686085136028" duration="44000" />
+      <workItem from="1686086242834" duration="483000" />
     </task>
     <task id="LOCAL-00001" summary="first commit (way to far in though)">
       <created>1685656021251</created>

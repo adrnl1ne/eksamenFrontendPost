@@ -153,7 +153,7 @@ function editBoat(boatId) {
         name: name,
         type: type,
     };
-    console.log(newParticipantBody)
+    console.log(boatBody)
     document.querySelector("#update-boat-spinner").style.display = "block";
     document.querySelector("#update-boat-button").style.display = "none";
     document.querySelector("#delete-boat-button").style.display = "none";
